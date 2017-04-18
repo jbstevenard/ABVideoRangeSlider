@@ -191,6 +191,11 @@ public class ABVideoRangeSlider: UIView, UIGestureRecognizerDelegate {
         }
     }
 
+    public func setIndicators(enabled: Bool){
+        self.startIndicator.isUserInteractionEnabled = enabled
+        self.endIndicator.isUserInteractionEnabled = enabled
+    }
+
     public func setStartIndicatorImage(image: UIImage){
         self.startIndicator.imageView.image = image
     }
