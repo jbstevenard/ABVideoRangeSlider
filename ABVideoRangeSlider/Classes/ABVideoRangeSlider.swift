@@ -571,6 +571,8 @@ public class ABVideoRangeSlider: UIView, UIGestureRecognizerDelegate {
 
 
     private func secondsToFormattedString(totalSeconds: Float64) -> String{
+        guard !totalSeconds.isNaN else { return "" }
+        
         let hours:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 86400) / 3600)
         let minutes:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 3600) / 60)
         let seconds:Int = Int(totalSeconds.truncatingRemainder(dividingBy: 60))
