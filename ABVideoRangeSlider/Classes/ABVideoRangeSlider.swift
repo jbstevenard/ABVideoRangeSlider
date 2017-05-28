@@ -197,6 +197,7 @@ public class ABVideoRangeSlider: UIView, UIGestureRecognizerDelegate {
     }
 
     public func setProgressIndicator(enabled: Bool){
+        isProgressIndicatorDraggable = enabled
         self.progressIndicator.isUserInteractionEnabled = enabled
     }
 
